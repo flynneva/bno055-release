@@ -1,3 +1,26 @@
+## bno055 (foxy) - 0.3.0-1
+
+The packages in the `bno055` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --rosdistro foxy --track foxy bno055 --edit` on `Thu, 03 Mar 2022 05:58:49 -0000`
+
+The `bno055` package was released.
+
+Version of package(s) in repository `bno055`:
+
+- upstream repository: https://github.com/flynneva/bno055.git
+- release repository: https://github.com/flynneva/bno055-release.git
+- rosdistro version: `0.2.0-1`
+- old version: `0.2.0-2`
+- new version: `0.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## bno055 (foxy) - 0.2.0-2
 
 The packages in the `bno055` repository were released into the `foxy` distro by running `/usr/bin/bloom-release bno055 --rosdistro foxy` on `Thu, 03 Mar 2022 05:42:05 -0000`
