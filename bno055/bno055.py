@@ -66,8 +66,9 @@ class Bno055Node(Node):
                              self.param.uart_port.value,
                              self.param.uart_timeout.value)
         elif self.param.connection_type.value == I2C.CONNECTIONTYPE_I2C:
-            # TODO implement IC2 integration
-            raise NotImplementedError('I2C not yet implemented')
+            connector = I2C(self,
+                            self.param.i2c_bus.value,
+                            self.param.i2c_addr.value)
         else:
             raise NotImplementedError('Unsupported connection type: '
                                       + str(self.param.connection_type.value))
@@ -110,6 +111,9 @@ def main(args=None):
                 node.sensor.get_sensor_data()
             except BusOverRunException:
                 # data not available yet, wait for next cycle | see #5
+                return
+            except ZeroDivisionError:
+                # division by zero in get_sensor_data, return
                 return
             except Exception as e:  # noqa: B902
                 node.get_logger().warn('Receiving sensor data failed with %s:"%s"'
